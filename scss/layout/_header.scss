@@ -1,0 +1,72 @@
+/* ==========
+    Header 
+========== */
+
+.header {
+    
+    background: linear-gradient(180deg, rgba(255,143,112,1) 5%, rgba(255,61,84,1) 85%);
+
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0 0 0 7rem;
+
+    padding: 4rem 2rem;
+    z-index: 0;
+
+
+    &__title {
+        text-align: center;
+        margin-top: 5rem;
+    }
+
+    &__subtitle {
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    .flex {
+        margin-top: 3rem;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    &__start,
+    &__learn {
+        border: none;
+        border-radius: 2rem;
+        padding: .75rem 0 .65rem;
+        cursor: pointer;
+        width: 135px;
+
+        transition: .1s ease-in-out;
+    }
+    
+    &__start {
+        background-color: var(--white);
+
+        &:hover {
+            background-color: #ff7b86;
+        }
+    }
+    
+    &__learn {
+        background-color: transparent;
+        border: 1px solid var(--white);
+
+        &:hover {
+            background-color: var(--white);
+        }
+    }
+
+}
+
+.header::before {
+    content: url(/images/bg-pattern-intro-mobile.svg);
+    position: absolute;
+    top: -40%;
+    left: -87%;
+    z-index: -1;
+    opacity: .4;
+}
