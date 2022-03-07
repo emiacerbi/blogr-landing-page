@@ -78,3 +78,21 @@
         }
     }
 }
+
+/* ==========
+    Free 
+========== */
+
+.free {
+
+    font-family: var(--ff-main);
+
+    &__title {
+        color: var(--very-dark-blue);
+        font-size: 1.75rem;
+    }    
+
+    &__content {
+        color: var(--very-dark-grayish-blue);
+    }
+}
