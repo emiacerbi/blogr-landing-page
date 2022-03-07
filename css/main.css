@@ -10,8 +10,8 @@
   --very-dark-black-blue: hsl(240, 10%, 16%);
   --very-light-red: #ff8f70;
   --light-red: #ff3d54;
-  --very-dark-gray-blue: hsl(237, 17%, 21%);
-  --very-dark-desaturated-blue: hsl(237, 23%, 32%);
+  --very-dark-gray-blue: #2c2d3f;
+  --very-dark-desaturated-blue: #3f4164;
 }
 
 /* Box sizing rules */
@@ -119,6 +119,38 @@ select {
 }
 
 /* ==========
+    Main 
+========== */
+.main {
+  font-family: var(--ff-main);
+}
+.main__title {
+  color: var(--very-dark-blue);
+  font-size: 1.75rem;
+  line-height: 1.1;
+}
+.main__content {
+  color: var(--very-dark-grayish-blue);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ==========
+    State 
+========== */
+.state__container {
+  color: var(--white);
+  font-family: var(--ff-main);
+}
+.state__container__title {
+  font-size: 2.25rem;
+}
+.state__container__content {
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* ==========
     Header 
 ========== */
 .header {
@@ -178,8 +210,66 @@ select {
 /* ==========
     Main 
 ========== */
+.main {
+  margin-top: 5rem;
+}
+.main__title {
+  text-align: center;
+  padding: 0 2.2rem;
+  margin-top: 2rem;
+}
+.main__img {
+  margin-top: 2rem;
+}
+.main__content {
+  text-align: center;
+  margin-top: 1rem;
+  padding: 0 2.2rem;
+}
+
 /* ==========
-   Overview 
+   State 
 ========== */
+.state {
+  height: 625px;
+  position: relative;
+  margin-top: 15rem;
+  text-align: center;
+}
+.state__img {
+  position: absolute;
+  top: -27%;
+}
+.state__container {
+  position: relative;
+  padding: 0 2.2rem;
+  background: linear-gradient(90deg, #2c2d3f 0%, #3f4164 100%);
+  height: 625px;
+  border-radius: 0 7rem 0 7rem;
+  z-index: -2;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.state__container::before {
+  content: "";
+  height: 100%;
+  width: 375px;
+  background-image: url(/images/bg-pattern-circles.svg);
+  background-size: 590px auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -40%;
+  left: -1%;
+  z-index: -1;
+}
+.state__container__title {
+  margin-top: 8rem;
+}
+.state__container__content {
+  margin-top: 1.5rem;
+}
 
 /*# sourceMappingURL=main.css.map */
