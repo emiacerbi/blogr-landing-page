@@ -89,9 +89,11 @@
         z-index: -1;
         opacity: .4;
     }
+
+
 }
 
-@media (min-width: 725px) {
+@media (min-width: 820px) {
 
     .header {
         padding: 4rem 5rem;
@@ -107,15 +109,87 @@
             &__ul {
                 display: flex;
                 list-style: none;
+                position: relative;
+                opacity: 1;
 
                 &__item {
-                    margin-left: .5rem;
+                    margin-left: 1.5rem;
+                    margin-right: 1rem;
                     cursor: pointer;
                     line-height: 1;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
 
-                    &:hover {
-                        border-bottom: 2px solid var(--white);
-                        margin-bottom: -2px;
+                    // &::before {
+                    //     content: url(../images/icon-arrow-light.svg);
+                    //     width: 10px;
+                    //     height: 7px;
+                    //     position: absolute;
+                    //     top: -3%;
+                    //     left: 110%;
+                    //     opacity: 1;
+
+                    //     transition: .3s;
+                    // }
+                    
+  
+
+                    
+                    &__title {
+                        
+                        &:hover {
+                            border-bottom: 2px solid var(--white);
+                            margin-bottom: -2px;
+                        }
+
+                        &::before {
+                            content: url(../images/icon-arrow-light.svg);
+                            width: 10px;
+                            height: 7px;
+                            position: absolute;
+                            top: -3%;
+                            left: 110%;
+                            opacity: 1;
+    
+                            transition: .5s;
+                        }
+
+                        &.active::before {
+                            transform: rotate(180deg);
+                            top: 80%;
+                        }
+                    }
+                    
+                    &__acc {
+                        list-style: none;
+                        padding: 0;
+                        position: absolute;
+                        top: 200%;
+                        left: 0;
+                        background-color: white;
+                        padding: .5rem 1rem 1rem 1rem;
+                        border-radius: .3rem;
+                        text-align: left;
+                        opacity: 0;
+                        cursor: default;
+                        
+                        width: 95px;
+                        
+                        transition: .2s ease-in-out;
+
+                        &__item {
+                            margin-top: .5rem;
+                            cursor: pointer;
+
+                            &:hover {
+                                font-weight: 700;
+                                // letter-spacing: 0;
+                                // -webkit-text-stroke: .3px black;
+
+
+                            }
+                        }
                     }
                 }
             }
