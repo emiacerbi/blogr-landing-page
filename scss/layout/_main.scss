@@ -13,12 +13,15 @@
     }
     
     &__img {
+        margin: 0 auto;
         margin-top: 2rem;
     }
     
     &__content {
         text-align: center;
+        margin: 0 auto;
         margin-top: 1rem;
         padding: 0 2.2rem;
+        max-width: 55ch;
     }
 }

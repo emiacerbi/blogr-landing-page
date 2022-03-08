@@ -94,6 +94,25 @@ select {
 .header {
   font-family: var(--ff-main);
 }
+.header__nav__ul {
+  color: var(--white);
+  font-family: var(--ff-sec);
+  font-weight: 500;
+  opacity: 0.8;
+}
+.header__nav__log__login {
+  opacity: 0.8;
+  font-weight: 500;
+  font-family: var(--ff-sec);
+  color: var(--white);
+}
+.header__nav__log__signup {
+  color: var(--light-red);
+  font-weight: 700;
+}
+.header__nav__log__signup:hover {
+  color: var(--white);
+}
 .header__title {
   color: var(--white);
   font-size: 2.1rem;
@@ -165,6 +184,22 @@ select {
 }
 
 /* ==========
+    Footer 
+========== */
+.footer {
+  color: var(--grayish-blue);
+  font-family: var(--ff-main);
+}
+.footer__list__title {
+  color: var(--white);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.footer__list__item {
+  font-size: 1.15rem;
+}
+
+/* ==========
     Header 
 ========== */
 .header {
@@ -175,6 +210,22 @@ select {
   border-radius: 0 0 0 7rem;
   padding: 4rem 2rem;
   z-index: 0;
+}
+.header__nav {
+  display: flex;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.header__nav__hamburguer {
+  margin-left: auto;
+  cursor: pointer;
+}
+.header__nav__ul {
+  display: none;
+}
+.header__nav__log {
+  display: none;
 }
 .header__title {
   text-align: center;
@@ -197,6 +248,7 @@ select {
   cursor: pointer;
   width: 135px;
   transition: 0.1s ease-in-out;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 .header__start {
   background-color: var(--white);
@@ -211,7 +263,6 @@ select {
 .header__learn:hover {
   background-color: var(--white);
 }
-
 .header::before {
   content: url(/images/bg-pattern-intro-mobile.svg);
   position: absolute;
@@ -221,6 +272,57 @@ select {
   opacity: 0.4;
 }
 
+@media (min-width: 725px) {
+  .header {
+    padding: 4rem 5rem;
+  }
+  .header__nav__hamburguer {
+    display: none;
+  }
+  .header__nav__ul {
+    display: flex;
+    list-style: none;
+  }
+  .header__nav__ul__item {
+    margin-left: 0.5rem;
+    cursor: pointer;
+    line-height: 1;
+  }
+  .header__nav__ul__item:hover {
+    border-bottom: 2px solid var(--white);
+    margin-bottom: -2px;
+  }
+  .header__nav__log {
+    padding-top: 0.22rem;
+    display: block;
+    margin-left: auto;
+  }
+  .header__nav__log__login {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+    margin-right: 1rem;
+  }
+  .header__nav__log__login:hover {
+    border-bottom: 2px solid var(--white);
+    margin-bottom: -2px;
+  }
+  .header__nav__log__signup {
+    background-color: var(--white);
+    border: none;
+    border-radius: 2rem;
+    padding: 0.75rem 0 0.65rem;
+    cursor: pointer;
+    width: 135px;
+    transition: 0.1s ease-in-out;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  }
+  .header__nav__log__signup:hover {
+    background-color: #ff7b86;
+  }
+}
 /* ==========
     Main 
 ========== */
@@ -233,12 +335,15 @@ select {
   margin-top: 2rem;
 }
 .main__img {
+  margin: 0 auto;
   margin-top: 2rem;
 }
 .main__content {
   text-align: center;
+  margin: 0 auto;
   margin-top: 1rem;
   padding: 0 2.2rem;
+  max-width: 55ch;
 }
 
 /* ==========
@@ -253,6 +358,9 @@ select {
 .state__img {
   position: absolute;
   top: -27%;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 375px;
 }
 .state__container {
   position: relative;
@@ -269,7 +377,7 @@ select {
 .state__container::before {
   content: "";
   height: 100%;
-  width: 375px;
+  width: 100%;
   background-image: url(/images/bg-pattern-circles.svg);
   background-size: 590px auto;
   background-position: center;
@@ -291,17 +399,48 @@ select {
 ========== */
 .free {
   text-align: center;
-  padding: 7rem 2.4rem 5rem;
+  padding: 7rem 0rem 5rem;
 }
 .free__img {
-  transform: scale(1.5);
-  margin-bottom: 5rem;
+  margin: 0 auto;
 }
 .free__title {
   margin-top: 2rem;
+  padding: 0 2.4rem;
 }
 .free__content {
   margin-top: 1.5rem;
+  padding: 0 2.4rem;
+}
+
+.footer {
+  background-color: var(--very-dark-black-blue);
+  border-radius: 0 7rem 0 0;
+  padding: 5rem 0 4rem;
+  margin: 0;
+  text-align: center;
+}
+.footer__logo {
+  margin: 0 auto;
+}
+.footer__list {
+  list-style: none;
+  padding: 0;
+}
+.footer__list__title {
+  margin: 2.5rem 0 1.5rem;
+}
+.footer__list__item {
+  margin-top: 0.5rem;
+  text-align: center;
+  width: fit-content;
+  margin: 0.75rem auto;
+  line-height: 1;
+}
+.footer__list__item:hover {
+  border-bottom: 2px solid var(--grayish-blue);
+  margin-bottom: -2px;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=main.css.map */

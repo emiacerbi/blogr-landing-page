@@ -12,6 +12,9 @@
    &__img {
       position: absolute;
       top: -27%;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 375px;
    }
    
    &__container {
@@ -29,7 +32,8 @@
       &::before {
          content: '';
          height: 100%;
-         width: 375px;
+         width: 100%;
+         // min-width: 375px;
          background-image: url(/images/bg-pattern-circles.svg);
          background-size: 590px auto;
          background-position: center;
