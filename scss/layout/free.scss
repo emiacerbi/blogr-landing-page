@@ -5,21 +5,73 @@
 .free {
 
     text-align: center;
-    
-    padding: 7rem 0rem 5rem;
+    padding: 7rem 0rem 7rem;
     
     &__img {
         margin: 0 auto;
-
     }
 
-    &__title {
-        margin-top: 2rem;
-        padding: 0 2.4rem;
+    &__container {
+        &__title {
+            margin: 0 auto;
+            margin-top: 2rem;
+            padding: 0 2.4rem;
+            max-width: 42ch;
+        }
+        
+        &__content {
+            margin: 0 auto;
+            margin-top: 1.5rem;
+            padding: 0 2.4rem;
+            max-width: 55ch;
+        }
     }
-    
-    &__content {
-        margin-top: 1.5rem;
-        padding: 0 2.4rem;
+
+}
+
+@media (min-width: 1300px) {
+    .free {
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        padding: 8rem;
+        position: relative;
+        height: 1000px;
+
+        &::before {
+            content: url(/images/illustration-laptop-desktop.svg);
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -19%;
+        }
+
+        &__img {
+            display: none;
+        }
+
+        
+        &__container {
+
+            text-align: left;
+
+            &__title {
+                margin: 0;
+                padding: 0;
+                
+            }
+            
+            &__content {
+                margin: 0;
+                padding: 0;
+                margin-top: 1.5rem;
+            }
+            
+            &__content:first-of-type {
+                margin-bottom: 3rem;
+            }
+        }
     }
 }

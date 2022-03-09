@@ -132,14 +132,19 @@
 
     font-family: var(--ff-main);
 
-    &__title {
-        color: var(--very-dark-blue);
-        font-size: 1.75rem;
-    }    
+    &__container {
+        line-height: 1.6;
 
-    &__content {
-        color: var(--very-dark-grayish-blue);
+        &__title {
+            color: var(--very-dark-blue);
+            font-size: 1.75rem;
+        }    
+    
+        &__content {
+            color: var(--very-dark-grayish-blue);
+        }
     }
+
 }
 
 /* ==========
@@ -150,17 +155,40 @@
     color: var(--grayish-blue);
     font-family: var(--ff-main);
 
-    &__list {
-
-        &__title {
-            color: var(--white);
-            font-weight: 700;
-            font-size: 1.2rem;
-        }
-
-        &__item {
-            font-size: 1.15rem;
+    &__container {
+        &__list {
+    
+            &__title {
+                color: var(--white);
+                font-weight: 700;
+                font-size: 1.2rem;
+            }
+    
+            &__item {
+                font-size: 1rem;
+            }
         }
     }
 
+
+}
+
+@media (min-width: 820px) {
+    .header {
+
+        &__title {
+            font-size: 3.25rem;
+        }
+    }
+
+    .state {
+        
+        &__container {
+
+            &__content {
+                line-height: 1.6;
+                font-size: 1rem;
+            }
+        }
+    }
 }

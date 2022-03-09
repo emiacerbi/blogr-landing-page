@@ -93,6 +93,24 @@
 
 }
 
+@media (min-width: 520px) {
+    .header {
+
+        &__title {
+            margin-top: 7rem;
+        }
+
+        &::before {
+            content: url(/images/bg-pattern-intro-desktop.svg);
+            position: absolute;
+            top: -222%;
+            left: -31%;
+            z-index: -1;
+            opacity: .5;
+        }
+    }
+}
+
 @media (min-width: 820px) {
 
     .header {
@@ -134,13 +152,13 @@
                     // }
                     
   
-
-                    
                     &__title {
+
                         
                         &:hover {
                             border-bottom: 2px solid var(--white);
                             margin-bottom: -2px;
+                            // text-decoration: underline;
                         }
 
                         &::before {
@@ -156,7 +174,7 @@
                         }
 
                         &.active::before {
-                            transform: rotate(180deg);
+                            transform: rotate(-180deg);
                             top: 80%;
                         }
                     }
@@ -176,7 +194,7 @@
                         
                         width: 95px;
                         
-                        transition: .2s ease-in-out;
+                        transition: .5s ease-in-out;
 
                         &__item {
                             margin-top: .5rem;
@@ -230,6 +248,10 @@
                     }
                 }
             }
+        }
+
+        &__title {
+            margin-top: 8rem;
         }
     }
 }

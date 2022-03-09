@@ -25,3 +25,56 @@
         max-width: 55ch;
     }
 }
+
+@media (min-width: 1300px) {
+    .main {
+
+        margin: 0;
+        height: 1000px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 8rem 3rem;
+
+        &::before {
+            content: url(/images/illustration-editor-desktop.svg);
+            // width: 100%;
+            // height: 100%;
+            position: absolute ;
+            top: 50%;
+            transform: translateY(-50%);
+            right: -20%;
+            z-index: 2;
+        }
+
+        &__title {
+            text-align: center;
+            margin-bottom: 8rem;
+        }
+
+        .subtitle {
+            text-align: left;
+            margin-bottom: 1rem;
+        }
+
+        &__img {
+            display: none;
+        }
+
+        &__content {
+            text-align: left;
+            margin: 0;
+            margin-top: 1rem;
+            margin-bottom: 3rem;
+            width: 54ch;
+            padding-right: 0;
+        }
+
+        &__content:last-child {
+            margin-bottom: 8rem;
+            width: 52ch;
+        }
+    }
+}

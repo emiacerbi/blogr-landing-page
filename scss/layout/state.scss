@@ -7,7 +7,6 @@
    position: relative;
    margin-top: 15rem;
    text-align: center;
-
    
    &__img {
       position: absolute;
@@ -49,7 +48,53 @@
       }
 
       &__content {
-         margin-top: 1.5rem;
+         margin: 0 auto;
+         margin-top: 1rem;
+         max-width: 50ch;
+      }
+   }
+}
+
+@media (min-width: 1440px) {
+   .state {
+
+      height: 400px;
+      margin: 0;
+
+      &__img {
+         top: -15%;
+         left: 29%;
+         transform: translateX(-50%);
+         max-width: 100%;
+      }
+
+      &__container  {
+         height: 400px;
+         background: linear-gradient(90deg, rgba(44,45,63,1) 0%, rgba(63,65,100,1) 100%); 
+         
+         text-align: left;
+         display: flex;
+         flex-direction: column;
+         align-items: flex-end;
+         justify-content: center;
+
+         &::before {
+            top: -51%;
+            left: -29%;
+            z-index: -1;
+            max-width: 100%;
+            max-height: 100%;
+            transform: scale(2);
+         }
+
+         &__title {
+            margin: 0;
+            margin-right: 9rem;
+         }
+         &__content {
+            width: 58ch;
+            margin-right: 8rem;
+         }
       }
    }
 }
