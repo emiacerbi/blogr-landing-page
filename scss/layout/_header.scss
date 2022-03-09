@@ -68,7 +68,7 @@
         background-color: var(--white);
 
         &:hover {
-            background-color: #ff7b86;
+            background-color: var(--very-light-red);
         }
     }
     
@@ -118,8 +118,6 @@
 
         &__nav {
 
-            // display: flex;
-            
             &__hamburguer {
                 display: none;
             } 
@@ -138,19 +136,6 @@
                     position: relative;
                     display: flex;
                     align-items: center;
-
-                    // &::before {
-                    //     content: url(../images/icon-arrow-light.svg);
-                    //     width: 10px;
-                    //     height: 7px;
-                    //     position: absolute;
-                    //     top: -3%;
-                    //     left: 110%;
-                    //     opacity: 1;
-
-                    //     transition: .3s;
-                    // }
-                    
   
                     &__title {
 
@@ -158,7 +143,6 @@
                         &:hover {
                             border-bottom: 2px solid var(--white);
                             margin-bottom: -2px;
-                            // text-decoration: underline;
                         }
 
                         &::before {
@@ -186,26 +170,22 @@
                         top: 200%;
                         left: 0;
                         background-color: white;
-                        padding: .5rem 1rem 1rem 1rem;
+                        padding: .5rem 1.75rem 2rem;
                         border-radius: .3rem;
                         text-align: left;
                         opacity: 0;
                         cursor: default;
                         
-                        width: 95px;
-                        
-                        transition: .5s ease-in-out;
+                        width: 160px;
+                        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                        transition: ease-in-out .5s;
 
                         &__item {
-                            margin-top: .5rem;
+                            margin-top: 1.5rem;
                             cursor: pointer;
 
                             &:hover {
                                 font-weight: 700;
-                                // letter-spacing: 0;
-                                // -webkit-text-stroke: .3px black;
-
-
                             }
                         }
                     }

@@ -1,0 +1,124 @@
+.body {
+    position: relative;
+}
+
+.mobile__nav {
+    
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translateX(-50%);
+    background-color: var(--white);
+    width: 325px;
+    border-radius: .5rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+    z-index: 1;
+    padding: 1.25rem 2rem 0;
+    
+    &__ul {
+
+        list-style: none;
+        padding: 0;
+        padding-bottom: .1rem;
+
+        &__item {
+
+            &__title {
+                cursor: pointer;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: .5rem;
+                transition: .3s ease-in-out;
+                margin-bottom: 2rem;
+
+                &.active {
+                    opacity: .8;
+                }
+
+                &:last-of-type {
+                    margin-bottom: 1rem;
+                }
+                
+                &::after {
+                    content: url(/images/icon-arrow-dark.svg);
+                    transition: .3s ease-in-out;
+                }
+                
+                &.active::after {
+                    transform: rotate(-180deg);
+                    align-items: baseline;
+                    margin-top: 1px;
+                }
+            }
+
+
+            &__acc {
+                
+                padding: 0;
+                overflow: hidden;
+                background-color: #efeff1;
+                transition: max-height .3s ease-in-out;
+                min-width: 100%;
+                width: 90%;
+                // margin: 1rem 0;
+                border-radius: .5rem;
+
+                max-height: 0;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                
+                margin-bottom: 1rem;
+
+                &__item {
+                    list-style: none;
+                    margin-top: 1rem;
+                    
+                    &:last-of-type {
+                        margin-bottom: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    &__log {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 2rem 0;
+        border-top: 1px solid lightgray;
+
+        &__login,
+        &__signup {
+            border: none;
+            border-radius: 2rem;
+            padding: .75rem 0 .65rem;
+            cursor: pointer;
+            width: 135px;
+    
+        }
+        
+        &__login {
+            background-color: transparent;
+    
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        
+        &__signup {
+            background: linear-gradient(180deg, hsl(13, 100%, 72%) 5%, rgba(255,61,84,1) 85%);
+    
+            &:hover {
+                background: transparent;
+                outline: 2px solid var(--light-red);
+            }
+        }
+    }
+}
