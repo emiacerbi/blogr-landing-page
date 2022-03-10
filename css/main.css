@@ -333,7 +333,7 @@ select {
   background-color: var(--white);
 }
 .header::before {
-  content: url(/images/bg-pattern-intro-mobile.svg);
+  content: url(../images/bg-pattern-intro-mobile.svg);
   position: absolute;
   top: -40%;
   left: -87%;
@@ -346,7 +346,7 @@ select {
     margin-top: 7rem;
   }
   .header::before {
-    content: url(/images/bg-pattern-intro-desktop.svg);
+    content: url(../images/bg-pattern-intro-desktop.svg);
     position: absolute;
     top: -222%;
     left: -31%;
@@ -401,18 +401,22 @@ select {
     top: 200%;
     left: 0;
     background-color: white;
-    padding: 0.5rem 1.75rem 2rem;
     border-radius: 0.3rem;
     text-align: left;
-    opacity: 0;
+    max-height: 0;
     cursor: default;
+    overflow: hidden;
     width: 160px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    transition: ease-in-out 0.5s;
+    transition: ease-in 0.2s;
   }
   .header__nav__ul__item__acc__item {
     margin-top: 1.5rem;
+    margin-left: 1.5rem;
     cursor: pointer;
+  }
+  .header__nav__ul__item__acc__item:last-of-type {
+    margin-bottom: 1.5rem;
   }
   .header__nav__ul__item__acc__item:hover {
     font-weight: 700;
@@ -486,7 +490,7 @@ select {
     padding: 12rem 8rem 12rem;
   }
   .main::before {
-    content: url(/images/illustration-editor-desktop.svg);
+    content: url(../images/illustration-editor-desktop.svg);
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -638,7 +642,7 @@ select {
     height: 1000px;
   }
   .free::before {
-    content: url(/images/illustration-laptop-desktop.svg);
+    content: url(../images/illustration-laptop-desktop.svg);
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -721,9 +725,10 @@ select {
 }
 
 .mobile__nav {
+  opacity: 0;
   position: absolute;
   left: 50%;
-  top: 25%;
+  top: -50%;
   transform: translateX(-50%);
   background-color: var(--white);
   width: 325px;
@@ -731,11 +736,11 @@ select {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   z-index: 1;
   padding: 1.25rem 2rem 0;
+  transition: 0.3s ease-in-out;
 }
 .mobile__nav__ul {
   list-style: none;
   padding: 0;
-  padding-bottom: 0.1rem;
 }
 .mobile__nav__ul__item__title {
   cursor: pointer;
@@ -754,7 +759,7 @@ select {
   margin-bottom: 1rem;
 }
 .mobile__nav__ul__item__title::after {
-  content: url(/images/icon-arrow-dark.svg);
+  content: url(../images/icon-arrow-dark.svg);
   transition: 0.3s ease-in-out;
 }
 .mobile__nav__ul__item__title.active::after {
@@ -788,13 +793,12 @@ select {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  padding: 2rem 0;
+  padding: 1rem 0 2rem;
   border-top: 1px solid lightgray;
 }
 .mobile__nav__log__login, .mobile__nav__log__signup {
   border: none;
   border-radius: 2rem;
-  padding: 0.75rem 0 0.65rem;
   cursor: pointer;
   width: 135px;
 }
@@ -806,10 +810,17 @@ select {
 }
 .mobile__nav__log__signup {
   background: linear-gradient(180deg, #ff8f70 5%, #ff3d54 85%);
+  padding: 0.75rem 0 0.65rem;
 }
 .mobile__nav__log__signup:hover {
   background: transparent;
   outline: 2px solid var(--light-red);
+}
+
+@media (min-width: 820px) {
+  .mobile__nav {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

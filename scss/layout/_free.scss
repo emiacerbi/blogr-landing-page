@@ -41,7 +41,7 @@
         height: 1000px;
 
         &::before {
-            content: url(/images/illustration-laptop-desktop.svg);
+            content: url(../images/illustration-laptop-desktop.svg);
             position: absolute;
             top: 50%;
             transform: translateY(-50%);

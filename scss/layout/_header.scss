@@ -82,7 +82,7 @@
     }
 
     &::before {
-        content: url(/images/bg-pattern-intro-mobile.svg);
+        content: url(../images/bg-pattern-intro-mobile.svg);
         position: absolute;
         top: -40%;
         left: -87%;
@@ -101,7 +101,7 @@
         }
 
         &::before {
-            content: url(/images/bg-pattern-intro-desktop.svg);
+            content: url(../images/bg-pattern-intro-desktop.svg);
             position: absolute;
             top: -222%;
             left: -31%;
@@ -113,8 +113,10 @@
 
 @media (min-width: 820px) {
 
+
     .header {
         padding: 4rem 5rem;
+
 
         &__nav {
 
@@ -170,19 +172,25 @@
                         top: 200%;
                         left: 0;
                         background-color: white;
-                        padding: .5rem 1.75rem 2rem;
                         border-radius: .3rem;
                         text-align: left;
-                        opacity: 0;
+                        max-height: 0;
                         cursor: default;
+                        overflow: hidden;
                         
                         width: 160px;
                         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-                        transition: ease-in-out .5s;
+                        transition: ease-in .2s;
 
+                        
                         &__item {
                             margin-top: 1.5rem;
+                            margin-left: 1.5rem;
                             cursor: pointer;
+
+                            &:last-of-type {
+                                margin-bottom: 1.5rem;
+                            }
 
                             &:hover {
                                 font-weight: 700;

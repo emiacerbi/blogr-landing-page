@@ -39,9 +39,7 @@
         padding: 12rem 8rem 12rem;
 
         &::before {
-            content: url(/images/illustration-editor-desktop.svg);
-            // width: 100%;
-            // height: 100%;
+            content: url(../images/illustration-editor-desktop.svg);
             position: absolute ;
             top: 50%;
             transform: translateY(-50%);
