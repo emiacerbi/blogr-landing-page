@@ -16,7 +16,7 @@
             &__item {
                 
                 &__title {
-                    opacity: .8;
+                    opacity: .9;
                 }
                 
                 &__acc {
@@ -97,7 +97,7 @@
     &__content {
         color: var(--very-dark-grayish-blue);
         font-size: 1rem;
-        line-height: 1.6;
+        line-height: 1.7;
     }
 }
 
@@ -133,14 +133,14 @@
     font-family: var(--ff-main);
 
     &__container {
-        line-height: 1.6;
-
+        
         &__title {
             color: var(--very-dark-blue);
             font-size: 1.75rem;
         }    
-    
+        
         &__content {
+            line-height: 1.7;
             color: var(--very-dark-grayish-blue);
         }
     }

@@ -43,7 +43,7 @@
             position: absolute ;
             top: 50%;
             transform: translateY(-50%);
-            right: -20%;
+            right: -17%;
             z-index: 2;
         }
 
@@ -74,5 +74,22 @@
             margin-bottom: 8rem;
             width: 52ch;
         }
+    }
+}
+
+@media (min-width: 1500px) {
+
+    .main {
+        padding: 12rem 12rem 12rem;
+
+        &::before {
+            content: url(../images/illustration-editor-desktop.svg);
+            position: absolute ;
+            top: 50%;
+            transform: translateY(-50%);
+            right: -10%;
+            z-index: 2;
+        }
+
     }
 }

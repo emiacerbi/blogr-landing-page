@@ -75,3 +75,19 @@
         }
     }
 }
+
+@media (min-width: 1500px) {
+
+    .free {
+        padding: 8rem 12rem 8rem;
+
+        &::before {
+            content: url(../images/illustration-laptop-desktop.svg);
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -8%;
+        }
+    }
+
+}

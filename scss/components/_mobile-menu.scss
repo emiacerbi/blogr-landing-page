@@ -22,7 +22,6 @@
         list-style: none;
         padding: 0;
 
-
         &__item {
 
             &__title {
@@ -32,7 +31,6 @@
                 align-items: center;
                 justify-content: center;
                 gap: .5rem;
-                transition: .3s ease-in-out;
                 margin-bottom: 2rem;
 
                 &.active {

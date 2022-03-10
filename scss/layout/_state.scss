@@ -33,7 +33,7 @@
          height: 100%;
          width: 100%;
          // min-width: 375px;
-         background-image: url(/images/bg-pattern-circles.svg);
+         background-image: url(../images/bg-pattern-circles.svg);
          background-size: 590px auto;
          background-position: center;
          background-repeat: no-repeat;
@@ -55,7 +55,7 @@
    }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1300px) {
    .state {
 
       height: 400px;
